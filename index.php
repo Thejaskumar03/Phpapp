@@ -11,7 +11,7 @@
 
 <?php
 if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
+    $uname = $_POST['username'];
     $email = $_POST['email'];
     // Database
     $servername = "database-1.c582eqyay70n.ap-south-1.rds.amazonaws.com";
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
         die('Connection Failed: ' . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO user (Name, Email) VALUES ('$username', '$email')";
+    $sql = "INSERT INTO user (Name, Email) VALUES ('$uname', '$email')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
